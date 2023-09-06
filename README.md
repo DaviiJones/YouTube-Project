@@ -1,8 +1,11 @@
-# React + Vite
+# YouTube Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This YouTube clone project is a collaborative effort between Anthony Huarneck, Davon Bridgett and Michael Caldwell. This project makes use of JavaScript, Html, Css, React & other programs/features. 
 
-Currently, two official plugins are available:
+## How to Use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This program allows a user to search for any YouTube videos with the search bar. A user will input their search item into the search bar and press the "Submit" button. Once a search is submitted, eight different thumbnails of videos, along with their titles, related to the search input will render on the page beneath the search bar. 
+
+A user can then click on any of the thumbnails to be brought to a "Show" page that will allow user to play the clicked video. A user will also have the ability to leave a comment by completing a comment form beneath video.
+
+A user will have the ability to navigate to any page at any time by clicking on any of the links on the NavBar.

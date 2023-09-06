@@ -1,37 +1,23 @@
-import React, { useState, useEffect } from "react";
-import Video from "./Video.jsx";
-import { getSelectedVideo } from "../api/fetch.js";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
 
-
-function Show({ video, setVideo }) {
+function Show({ video }) {
   const [comment, setComment] = useState({ name: "", comment: "" });
-  const [section, setSection] = useState([])
-  const { videoId } = useParams()
-
-  // useEffect(() => {
-  //   getSelectedVideo(videoId).then((data) => {
-  //     console.log(data)
-  //     console.log(videoId)
-  //     setVideo(data.items[0])
-  //   }).catch((err) => {
-  //     console.error(err)
-  //   })
-  // }, [videoId])
+  const [section, setSection] = useState([]);
+  const { videoId } = useParams();
 
   function handleSubmit(event) {
     event.preventDefault();
-    handleTextChange(event)
-	setSection([comment, ...section])
-  console.log(comment, section)
+    handleTextChange(event);
+    setSection([comment, ...section]);
     resetForm();
   }
 
   function handleTextChange(event) {
     setComment({
       ...comment,
-      [event.target.id]: event.target.value 
+      [event.target.id]: event.target.value,
     });
   }
 
@@ -41,17 +27,17 @@ function Show({ video, setVideo }) {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div>
         {video ? (
           <div className="video">
-          <iframe
-            src={`https://www.youtube.com/embed/${videoId}`}
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            title="video"
-          />
-        </div>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}`}
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              title="video"
+            />
+          </div>
         ) : (
           <p>Loading video details...</p>
         )}
@@ -79,12 +65,14 @@ function Show({ video, setVideo }) {
           </fieldset>
         </form>
       </div>
-      <section>{section.map((comment, index) => (
-    <div key={index}>
-      <h5>{comment.name}</h5>
-      <p>{comment.comment}</p>
-    </div>
-  ))}</section>
+      <section>
+        {section.map((comment, index) => (
+          <div key={index}>
+            <h5>{comment.name}</h5>
+            <p>{comment.comment}</p>
+          </div>
+        ))}
+      </section>
     </>
   );
 }
