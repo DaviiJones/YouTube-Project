@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from './Navbar';
 import { getVideo } from "../api/fetch.js";
-import "./SearchBar.css"
+import "./Searchbar.css"
 
 function SearchBar({ searchParams, setSearchParams,searchInput, setSearchInput }) {
   
