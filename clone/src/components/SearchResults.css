@@ -1,6 +1,13 @@
 
 .searchResults {
 
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-gap: 20px; /* Adjust the gap between grid items */
    
   }
+
+.videoCard img {
+  width: 100%; /* Adjust card width as needed */
+  height: 100%;
+}

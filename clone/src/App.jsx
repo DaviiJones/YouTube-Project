@@ -15,6 +15,7 @@ function App() {
 
 
   return (
+    <>
     <div className="wrapper">
       <Router>
         <Routes>
@@ -24,6 +25,7 @@ function App() {
         </Routes>
       </Router>
     </div>
+    </>
   );
 }
 

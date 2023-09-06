@@ -1,4 +1,4 @@
-.navBar header {
+header {
     background-color: #ff3131;
     color: #fff;
     display: grid;
@@ -8,14 +8,24 @@
     top: 0;
     left: 0;
     right: 0;
+    align-items: center;
+    justify-content: start;
+    
 }
-.navBar h2{
+
+ h2{
     color: #fff;
     
 }
 
-.navBar img{
+img{
     height: 75px;
     margin: 15px 0 0 15px;
     width: auto;
+    align-items: center;    
 }
+
+a {
+padding-left: 15px;
+}
+
